@@ -1,4 +1,4 @@
-package com.tops;
+package model;
 
 public class Users {
 
