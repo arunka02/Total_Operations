@@ -39,7 +39,7 @@ public class Login extends JFrame {
                 String pword = txtpword.getText();
                 if(uname.equals("")) {
                     JOptionPane.showMessageDialog(null,"Please enter username!","Login",JOptionPane.INFORMATION_MESSAGE);
-                } else if(txtpword.equals("")) {
+                } else if(pword.equals("")) {
                     JOptionPane.showMessageDialog(null,"Please enter password!","Login",JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     UserService userService = new UserServiceImpl();
@@ -47,7 +47,7 @@ public class Login extends JFrame {
                     if(status) {
                         JOptionPane.showMessageDialog(null,"Login successful...","Username",JOptionPane.INFORMATION_MESSAGE);
                     } else {
-                        JOptionPane.showMessageDialog(null,"Invaild username or password","Password",JOptionPane.INFORMATION_MESSAGE);    
+                        JOptionPane.showMessageDialog(null,"Invaild username or password","Password",JOptionPane.ERROR_MESSAGE);    
                     }
                     
                 }
